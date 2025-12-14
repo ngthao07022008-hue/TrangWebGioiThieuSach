@@ -1,0 +1,182 @@
+/* Thiết lập chung - Tông màu Giấy Da (Parchment) */
+body {
+    font-family: 'Times New Roman', Times, serif; 
+    background-color: #f7e9c9; /* Màu Kem nhạt (Parchment Light) */
+    color: #3b2f2f; /* Màu Mực Nâu Đậm */
+    line-height: 1.65;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header - Biểu ngữ Tiêu đề Sách */
+header {
+    background-color: #2e4d3a; /* Xanh Rêu Đậm (Màu rừng) */
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    border-bottom: 8px solid #ccaa44; /* Viền Vàng Kim */
+    border-top: 2px solid #ccaa44;
+}
+
+/* Tiêu đề chính - Dịu mắt hơn, trang trọng hơn */
+header h1 {
+    font-size: 3.2em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 700;
+    color: #ffeb99; /* Màu Vàng Kim dịu */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7); 
+    animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+header .goal {
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 15px;
+    color: #d4d4d4; 
+}
+
+/* Nội dung chính */
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #ffffff; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #ccaa44; 
+}
+
+/* Tiêu đề các section - Màu Mực Nâu Đậm */
+h2, h3 {
+    color: #8b4513; /* Nâu Đỏ Lông Sư Tử */
+    border-bottom: 2px dashed #ccaa44; /* Đường kẻ nét đứt cổ điển */
+    padding-bottom: 10px;
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- BỐ CỤC ẢNH BÌA VÀ TIÊU ĐỀ (KHUNG VÀNG KIM) --- */
+.book-info {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    margin-bottom: 40px;
+    
+    /* === MÀU NỀN VÀNG KIM CỔ ĐIỂN === */
+    background-color: #ccaa44; 
+    padding: 25px; 
+    border-radius: 10px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); 
+}
+
+.book-cover {
+    width: 250px; 
+    height: auto;
+    border: 8px ridge #4a382e; 
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.5); 
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: rotateZ(-2deg); 
+}
+
+.book-cover:hover {
+    transform: rotateZ(0deg) scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tên Tác Phẩm Chính (Điều chỉnh màu cho nền Vàng Kim) */
+.book-header-info .main-title {
+    color: #3b2f2f; /* Màu Mực Nâu Đậm */
+    font-size: 2.8em; 
+    font-weight: bold;
+    margin: 0 0 5px 0; 
+    padding-bottom: 0;
+    line-height: 1.1;
+    text-transform: none;
+}
+
+/* Tên Tác Giả (Điều chỉnh màu cho nền Vàng Kim) */
+.book-header-info .author-name {
+    color: #8b4513; /* Màu Nâu Đỏ Lông Sư Tử */
+    font-size: 1.5em;
+    font-style: italic;
+    margin: 0 0 30px 0;
+    font-weight: normal;
+}
+
+
+/* Trích dẫn (<blockquote>) - Phong cách Cuốn Giấy */
+blockquote {
+    background-color: #fff9e6; /* Màu giấy da nhạt */
+    border: 1px solid #ccaa44;
+    border-radius: 5px;
+    padding: 30px;
+    margin: 40px 0;
+    font-style: italic;
+    font-size: 1.1em;
+    position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+blockquote::before {
+    content: "“";
+    font-size: 4em;
+    color: #8b4513;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    line-height: 1;
+}
+
+/* ĐÃ FIX LỖI MÀU CHỮ TRONG FOOTER CỦA BLOCKQUOTE */
+blockquote footer {
+    text-align: right;
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ffc107; /* MÀU VÀNG CÁT SÁNG (Đã sửa lỗi bị tối) */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4); 
+}
+
+/* Thông tin thú vị (ul) - Biểu tượng mới */
+.fun-facts ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.fun-facts li {
+    list-style: none;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccaa44;
+    background: #fff;
+}
+
+.fun-facts li::before {
+    content: "✨"; /* Biểu tượng lấp lánh */
+    margin-right: 10px;
+    color: #ccaa44;
+    font-weight: bold;
+}
+
+/* Footer - Khép lại trang sách */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #3b2f2f; /* Màu Mực Đậm */
+    color: #f7e9c9; /* Màu Giấy Da */
+    margin-top: 70px;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+}
